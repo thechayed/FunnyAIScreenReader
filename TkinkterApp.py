@@ -7,9 +7,13 @@ from ScreenReader import *
 
 class GreetingWindow:
     def __init__(self, master):
+        # The master window for the GreetingWindow
         self.master = master
+        # The title of the GreetingWindow
         self.master.title("Welcome to Screen Reader")
+        # The size of the GreetingWindow
         self.master.geometry("600x400")
+        # Method to create the widgets for the GreetingWindow
         self.create_widgets()
 
     def create_widgets(self):
@@ -51,9 +55,13 @@ class TkinterApp:
     def __init__(self, master, config):
 
         self.master = master
+        # The configuration for the ScreenAnalyzer
         self.config = config
+        # The ScreenAnalyzer object
         self.analyzer = ScreenAnalyzer(config)
+        # Flag to indicate if the screen reader is currently active
         self.screen_reader_active = False
+        # The thread for the screen reader
         self.screen_reader_thread = None
 
         self.master.title("Screen Reader Application")
